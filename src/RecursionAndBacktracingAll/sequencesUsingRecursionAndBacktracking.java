@@ -3,7 +3,7 @@ package RecursionAndBacktracingAll;
 import java.util.ArrayList;
 import java.util.List;
 
-public class sequence {
+public class sequencesUsingRecursionAndBacktracking {
     /*public void subsequence(int index, ArrayList<Integer> list, int[] arr){
         if(index==arr.length){
             System.out.println(list);
@@ -117,7 +117,7 @@ public class sequence {
         char[] array=string.toCharArray();
         List<Character> list = new ArrayList<>();
         boolean[] frequency= new boolean[array.length];
-        sequence sq= new sequence();
+        sequencesUsingRecursionAndBacktracking sq= new sequencesUsingRecursionAndBacktracking();
         sq.allsequences(list, array, frequency);
     }
 }
