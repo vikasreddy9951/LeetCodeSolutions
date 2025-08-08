@@ -1,8 +1,8 @@
-package ArraysAndString;
+package MatrixAndSudokoSolvers;
 
 import java.util.Arrays;
 
-public class sudoko {
+public class rotateAMatrix {
    /* public boolean solve(char[][] board){
         for(int i=0;i<9;i++){
             for(int j=0;j<9;j++){
@@ -76,7 +76,7 @@ public class sudoko {
         }
     }*/
         int[][] matrix={{1,2,3},{4,5,6},{7,8,9}};
-        sudoko sd= new sudoko();
+        rotateAMatrix sd= new rotateAMatrix();
         sd.rotate(matrix);
         System.out.println(Arrays.deepToString(matrix));
         System.out.println("..........................................");

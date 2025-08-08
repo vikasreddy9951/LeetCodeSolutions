@@ -1,7 +1,4 @@
-package ArraysAndString;
-
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+package All;
 
 public class Multithreading extends Thread {
     public void run(){

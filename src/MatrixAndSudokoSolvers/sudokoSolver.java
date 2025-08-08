@@ -1,4 +1,4 @@
-package ArraysAndString;
+package MatrixAndSudokoSolvers;
 
 public class sudokoSolver {
     public boolean solveSudoku(char[][] board) {

@@ -1,9 +1,7 @@
-package ArraysAndString;
+package RecursionAndBacktracingAll;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class sequence {
     /*public void subsequence(int index, ArrayList<Integer> list, int[] arr){
@@ -66,7 +64,7 @@ public class sequence {
             list.removeLast();
         }
     }*/
-    public int lengthOfLongestSubstring(String s) {
+    /*public int lengthOfLongestSubstring(String s) {
         Set<Character> set= new HashSet<>();
         int count=0;
         set.add(s.charAt(0));
@@ -84,13 +82,42 @@ public class sequence {
             set.add(s.charAt(s.length()-1));
         }
         return count;
+    }*/
+    public void allsequences(List<Character> list, char[] array, boolean[] frequency){
+        if(list.size()==array.length){
+            StringBuilder sb= new StringBuilder();
+            for(int i=0;i<array.length;i++){
+                sb.append(list.get(i));
+            }
+            System.out.println(sb.toString());
+            return;
+        }
+        for(int i=0;i<array.length;i++){
+            if(!frequency[i]){
+                frequency[i]=true;
+                list.add(array[i]);
+                allsequences(list, array, frequency);
+                list.removeLast();
+                frequency[i]=false;
+            }
+        }
     }
     public static void main(String[] args){
-        sequence sq= new sequence();
+        /*sequence sq= new sequence();
         String string ="ABC";
-        char[] characters=string.toCharArray();
+//        char[] characters=string.toCharArray();
+//        ArrayList<Character> list = new ArrayList<>();
+//        List<List<Character>> result= new ArrayList<>();
+//        System.out.println(sq.lengthOfLongestSubstring("pwwekew"));//length=7
         ArrayList<Character> list = new ArrayList<>();
-        List<List<Character>> result= new ArrayList<>();
-        System.out.println(sq.lengthOfLongestSubstring("pwwekew"));//length=7
+        *//*int[] array={1,2,3};*//*
+        sq.permutation(list,string);*/
+
+        String string ="ABC";
+        char[] array=string.toCharArray();
+        List<Character> list = new ArrayList<>();
+        boolean[] frequency= new boolean[array.length];
+        sequence sq= new sequence();
+        sq.allsequences(list, array, frequency);
     }
 }

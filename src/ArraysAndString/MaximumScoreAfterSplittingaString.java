@@ -20,16 +20,16 @@ public class MaximumScoreAfterSplittingaString {
         }
         return maxcount;
     }
-    public void backtracing(int n,int start){
+    /*public void backtracing(int n,int start){
         if(n<start){
             return;
         }
         backtracing(n,start+1);
         System.out.println(start);
-    }
+    }*/
     public static void main(String[] args){
         MaximumScoreAfterSplittingaString msasas= new MaximumScoreAfterSplittingaString();
-        /*System.out.println(msasas.maxScore("011101"));*/
-        msasas.backtracing(3,1);
+        System.out.println(msasas.maxScore("011101"));
+        /*msasas.backtracing(3,1);*/
     }
 }

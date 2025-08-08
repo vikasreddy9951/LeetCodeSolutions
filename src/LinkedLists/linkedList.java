@@ -1,6 +1,4 @@
-package ArraysAndString;
-
-import java.util.Arrays;
+package LinkedLists;
 
 public class linkedList {
     private Node head;

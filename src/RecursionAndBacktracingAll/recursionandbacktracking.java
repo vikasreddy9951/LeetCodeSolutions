@@ -1,8 +1,10 @@
-package ArraysAndString;
+package RecursionAndBacktracingAll;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class recursionandbacktracking {
+    //problems on recuring and backing for an array or String etc...,
     /*public static void recursions(int index, int[] arr,ArrayList<Integer> list){
         int n= arr.length;
         if(index>=n){
@@ -37,7 +39,7 @@ public class recursionandbacktracking {
         }
         return false;
     }*/
-    public void combinationSum(int index, int[] arr, ArrayList<Integer> list,int target) {
+    /*public void combinationSum(int index, int[] arr, ArrayList<Integer> list,int target) {
         if (index == arr.length) {
             if (target == 0) {
                 System.out.println(list.toString());
@@ -50,13 +52,28 @@ public class recursionandbacktracking {
             list.removeLast();
         }
         combinationSum(index + 1, arr, list, target);
+    }*/
+    public void combinationsum(int index, int[] array,ArrayList<Integer> list, int target){
+        if(index==array.length){
+            if(target==0){
+                System.out.println(list);
+            }
+            return;
+        }
+        if(array[index]<=target){
+            list.add(array[index]);
+            combinationsum(index,array,list,target-array[index]);
+            list.remove(list.size()-1);
+        }
+        combinationsum(index+1,array,list,target);
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3};
+        int[] arr = {2,3,6,7};
+        int target=7;
         ArrayList<Integer> list = new ArrayList<>();
+        List<List<Integer>> answer= new ArrayList<>();
         recursionandbacktracking recursion = new recursionandbacktracking();
-        int target=3;
-        recursion.combinationSum(0,arr,list,target);
+        recursion.combinationsum(0,arr,list,target);
     }
 }

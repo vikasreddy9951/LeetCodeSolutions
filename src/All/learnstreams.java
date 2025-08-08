@@ -1,7 +1,6 @@
-package ArraysAndString;
+package All;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public class learnstreams {
     /*public static void java8(){
