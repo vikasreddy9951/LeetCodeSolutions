@@ -12,6 +12,7 @@ public class AddingSpacestoaString {
         }
         return sb.toString();
     }
+    //hello world from mac os
 
     public static void main(String[] args){
         AddingSpacestoaString asts=new AddingSpacestoaString();
