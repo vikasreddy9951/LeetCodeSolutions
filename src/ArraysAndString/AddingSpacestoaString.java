@@ -12,8 +12,7 @@ public class AddingSpacestoaString {
         }
         return sb.toString();
     }
-    //hello world from mac os
-
+    //hello world from mac os m4
     public static void main(String[] args){
         AddingSpacestoaString asts=new AddingSpacestoaString();
         String s="LeetcodeHelpsMeLearn";
